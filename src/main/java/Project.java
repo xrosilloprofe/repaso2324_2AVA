@@ -31,7 +31,8 @@ public class Project {
 @Override
     public boolean equals(Object object) {
         Project aux = (Project) object;
-        if (object instanceof Project && aux.getNombre() == this.nombre) return true;
+        if (object instanceof Project &&
+                aux.getNombre().equals(nombre)) return true;
         return false;
     }
 

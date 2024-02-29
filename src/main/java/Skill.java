@@ -1,0 +1,8 @@
+public enum Skill{
+    COMMUNICATION,
+    CRITICAL_THINKING,
+    LEADERSHIP,
+    POSITIVE_ATTITUDE,
+    TEAM_WORK,
+    WORK_ETHIC;
+}
