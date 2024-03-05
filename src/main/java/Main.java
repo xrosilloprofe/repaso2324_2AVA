@@ -17,6 +17,9 @@ public class Main {
         saveEmployee(employees);
         loadEmployee();
 
+        employees.stream().filter(employee -> employee.getAge()>40).
+                sorted().forEach(employee -> System.out.println(employee));
+
     }
 
     public static void save(Collection<Employee> empleados){
