@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class Employee {
+public abstract class Employee implements Comparable<Employee>, Serializable {
     private String name;
     private int employeeId;
     private int age;
@@ -36,7 +37,7 @@ public abstract class Employee {
     public int getAge() {
         return age;
     }
-    public boolean getActive() {
+    public boolean isActive() {
         return active;
     }
     public void setActive(boolean active) {
@@ -67,4 +68,11 @@ public abstract class Employee {
         else
             return false;
     }
+
+    @Override
+    public int compareTo(Employee e){
+        return name.compareTo(e.name);
+    }
+
+
 }
